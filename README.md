@@ -14,31 +14,14 @@ GLaDOS automatic check-in bypassing CloudFlare using github action
 ### 1. 添加 Cookie 至 Secrets
 - 登陆[GLaDOS](https://glados.rocks/)后，F12打开开发者工具。
 - 刷新网页，并在浏览器中提取复制`Cookie`项（本程序可处理`Cookie:`前缀，使用者复制该项时是否具有前缀均可)
-
-<p align="center">
-  <img src="imgs/Step1.png" />
-</p>
-
 - 在项目页面，依次点击`Settings`-->`Secrets`-->`Actions`-->`New repository secret`
-<p align="center">
-  <img src="imgs/Step2.png" />
-</p>
-
 - 建立名为`GLADOS_COOKIE`的 secret，值为复制的`Cookie`内容，最后点击`Add secret`
 - secret名字必须为`GLADOS_COOKIE`，大小写敏感
 - 支持多用户签到，多个Cookie之间采用`&&`手动分割完成后填入`GLADOS_COOKIE`即可
 - 为保护隐私，不在日志中输出任何Id信息，请自行分辨账号顺序
 
-<p align="center">
-  <img src="imgs/Step3.png" />
-</p>
-
 ### 2. 启用 Actions
 - 在项目页面，依次点击`Actions`-->`glados`-->`Run workflow`-->`Run workflow`以激活Actions
-
-<p align="center">
-  <img src="imgs/Step4.png" />
-</p>
 
 - Workflow开启后，每日0时30分自动执行。
 
@@ -69,19 +52,11 @@ GLaDOS automatic check-in bypassing CloudFlare using github action
 配置步骤如下：
 1. 首先[生成Personal access token](https://github.com/settings/tokens/new)用于获得对仓库的访问权限。
 
-<p align="center">
-  <img src="imgs/NewPAT.png" />
-</p>
-
 - `Note`项填写token的名字，用户自由命名即可
 - `Expiration`项填写token过期时长，建议填写为`No Expiration`
 - `Select scopes`项依据图示选择`repo`项全部内容和`workflow`项
 
 2. 滑动到页面最下方点击`Generate token`获得token，并手动复制token值。<b>该token值仅显示一次，关闭页面后无法找回。</b>
-
-<p align="center">
-  <img src="imgs/PATtoken.png" />
-</p>
 
 3. 在本仓库创建名为`PAT`的secret，将上一步生成的token作为`PAT`的值。
 
