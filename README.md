@@ -1,4 +1,4 @@
-# GLaDOS_Checkin-借助GitHub自带的Actions实现GLaDOS每天自动签到，并使用Server酱/pushPlus/企业微信推送消息
+# GLaDOS_Checkin
 GLaDOS automatic check-in bypassing CloudFlare using github action
 
 ## 功能描述
