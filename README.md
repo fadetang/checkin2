@@ -1,3 +1,5 @@
+# 一点小羊毛。好哥哥们顺手点个 star 吧。
+
 # GLaDOS_Checkin
 GLaDOS automatic check-in bypassing CloudFlare using github action
 
