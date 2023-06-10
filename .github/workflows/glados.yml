@@ -20,6 +20,8 @@ jobs:
       - name: Install requirements
         run: |
           pip3 install -r ./glados/requirements.txt
+          pip uninstall selenium
+          pip install selenium==4.9.1
       - name: Run checkin
         run: |
           python3 ./glados/main.py --cookie_string "${{ secrets.GLADOS_COOKIE }}"
