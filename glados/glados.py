@@ -40,7 +40,7 @@ def glados_checkin(driver):
         var request = new XMLHttpRequest();
         request.open("POST","%s",false);
         request.setRequestHeader('content-type', 'application/json');
-        request.send('{"token": "glados.network"}');
+        request.send('{"token": "glados.one"}');
         return request;
         })();
         """ % (checkin_url)
@@ -70,9 +70,10 @@ def glados(cookie_string):
 	options = uc.ChromeOptions()
 	options.add_argument("--disable-popup-blocking")
 
-	version = get_driver_version()
-	driver = uc.Chrome(version_main=version, options=options)
-
+	# version = get_driver_version()
+	# driver = uc.Chrome(version_main=version, options=options)
+	driver = uc.Chrome(options=options)
+	
 	# Load cookie
 	driver.get("https://glados.rocks")
 
